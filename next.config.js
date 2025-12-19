@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",           // REQUIRED for build-only deploy
+  // OpenNext Cloudflare adapter configuration
   images: {
-    unoptimized: true,        // REQUIRED for Cloudflare static hosting
     domains: [
       "images.unsplash.com",
       "logos-world.net",

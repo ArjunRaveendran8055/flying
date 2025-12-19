@@ -24,7 +24,10 @@ export function Hero() {
     const checkLoader = () => {
       const loader = document.querySelector('.loader-container') as HTMLElement | null;
       if (!loader || loader.style.display === 'none') {
-        setLoaderComplete(true);
+        // Small delay to ensure DOM is ready and prevent flicker
+        setTimeout(() => {
+          setLoaderComplete(true);
+        }, 50);
       }
     };
 
@@ -50,6 +53,17 @@ export function Hero() {
     ).matches;
 
     const ctx = gsap.context(() => {
+      // Set initial states immediately to prevent flicker
+      if (titleRef.current) {
+        gsap.set(titleRef.current, { opacity: 0 });
+      }
+      if (subtitleRef.current) {
+        gsap.set(subtitleRef.current, { opacity: 0, y: 30 });
+      }
+      if (ctaRef.current) {
+        gsap.set(ctaRef.current.children, { opacity: 0, y: 30 });
+      }
+
       if (prefersReducedMotion) {
         // Simple fade-in for reduced motion
         gsap.to([titleRef.current, subtitleRef.current, ctaRef.current], {
@@ -93,6 +107,12 @@ export function Hero() {
           stagger: 0.1,
           ease: "power4.out",
           delay: 0.3,
+          onStart: () => {
+            // Ensure title container is visible when animation starts
+            if (titleRef.current) {
+              gsap.set(titleRef.current, { opacity: 1 });
+            }
+          },
         });
       }
 
@@ -153,14 +173,14 @@ export function Hero() {
         <h1
           ref={titleRef}
           className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
-          style={{ opacity: loaderComplete ? 1 : 0 }}
+          style={{ opacity: 0 }}
         >
           Here Dreams Take Wings
         </h1>
         <p
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto"
-          style={{ opacity: loaderComplete ? 1 : 0 }}
+          style={{ opacity: 0 }}
         >
           Ready to fly? Join Flywings International and soar high in aviation,
           hospitality, logistics, and shipping industries.
@@ -168,7 +188,7 @@ export function Hero() {
         <div
           ref={ctaRef}
           className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center"
-          style={{ opacity: loaderComplete ? 1 : 0 }}
+          style={{ opacity: 0 }}
         >
           <Link href="/admission">
             <Button size="lg" className="group">

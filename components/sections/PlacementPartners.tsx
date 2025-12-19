@@ -12,47 +12,47 @@ if (typeof window !== "undefined") {
 const placementPartners = [
   {
     name: "Adani Thiruvananthapuram",
-    logo: "https://logos-world.net/wp-content/uploads/2021/08/Adani-Logo.png",
+    logo: "/images/logos/placement_partners/adani.png",
     fallback: "Adani",
   },
   {
     name: "Kempegowda International Airport Bengaluru",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Kempegowda_International_Airport_Logo.svg/1200px-Kempegowda_International_Airport_Logo.svg.png",
+    logo: "/images/logos/placement_partners/kempagowda.jpeg",
     fallback: "KIA",
   },
   {
     name: "Chennai International Airport",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Chennai_International_Airport_Logo.svg/1200px-Chennai_International_Airport_Logo.svg.png",
+    logo: "/images/logos/placement_partners/chennai.png",
     fallback: "Chennai Airport",
   },
   {
     name: "Delhivery",
-    logo: "https://logos-world.net/wp-content/uploads/2021/08/Delhivery-Logo.png",
+    logo: "/images/logos/placement_partners/delhivery.png",
     fallback: "Delhivery",
   },
   {
     name: "Kannur International Airport",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Kannur_International_Airport_Logo.svg/1200px-Kannur_International_Airport_Logo.svg.png",
+    logo: "/images/logos/placement_partners/kannur.png",
     fallback: "Kannur Airport",
   },
   {
     name: "Air India Express",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Air-India-Express-Logo.png",
+    logo: "/images/logos/placement_partners/air_india.png",
     fallback: "Air India Express",
   },
   {
     name: "Air India",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Air-India-Logo.png",
+    logo: "/images/logos/placement_partners/air_india.png",
     fallback: "Air India",
   },
   {
     name: "Qatar Airways",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Qatar-Airways-Logo.png",
+    logo: "/images/logos/placement_partners/qutar.png",
     fallback: "Qatar Airways",
   },
   {
     name: "SpiceJet",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/SpiceJet-Logo.png",
+    logo: "/images/logos/placement_partners/spice.png",
     fallback: "SpiceJet",
   },
   {
@@ -67,7 +67,7 @@ const placementPartners = [
   },
   {
     name: "CIAL Cochin International Airport",
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Cochin_International_Airport_Logo.svg/1200px-Cochin_International_Airport_Logo.svg.png",
+    logo: "/images/logos/placement_partners/cial.png",
     fallback: "CIAL",
   },
   {
@@ -82,17 +82,17 @@ const placementPartners = [
   },
   {
     name: "AirAsia",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/AirAsia-Logo.png",
+    logo: "/images/logos/placement_partners/air_asia.png",
     fallback: "AirAsia",
   },
   {
     name: "IndiGo",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/IndiGo-Logo.png",
+    logo: "/images/logos/placement_partners/indigo.png",
     fallback: "IndiGo",
   },
   {
     name: "Etihad Airways",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Etihad-Airways-Logo.png",
+    logo: "/images/logos/placement_partners/ethihad.png",
     fallback: "Etihad",
   },
   {
@@ -107,12 +107,12 @@ const placementPartners = [
   },
   {
     name: "GlobeGround India",
-    logo: "https://logos-world.net/wp-content/uploads/2021/08/GlobeGround-Logo.png",
+    logo: "/images/logos/placement_partners/globe_ground.jpeg",
     fallback: "GlobeGround",
   },
   {
     name: "Fly Smart Go Air",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/GoAir-Logo.png",
+    logo: "/images/logos/placement_partners/fly_smart_go.jpeg",
     fallback: "GoAir",
   },
   {
@@ -122,17 +122,17 @@ const placementPartners = [
   },
   {
     name: "FedEx",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/FedEx-Logo.png",
+    logo: "/images/logos/placement_partners/fedex.png",
     fallback: "FedEx",
   },
   {
     name: "Blue Dart",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Blue-Dart-Logo.png",
+    logo: "/images/logos/placement_partners/bluedart.png",
     fallback: "Blue Dart",
   },
   {
     name: "Maersk",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Maersk-Logo.png",
+    logo: "/images/logos/placement_partners/maersk.png",
     fallback: "Maersk",
   },
   {
@@ -201,7 +201,6 @@ export function PlacementPartners() {
                   alt={partner.name}
                   className="max-w-full max-h-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                   loading="lazy"
-                  crossOrigin="anonymous"
                   onError={(e) => {
                     // Fallback to text if image fails to load
                     const target = e.target as HTMLImageElement;

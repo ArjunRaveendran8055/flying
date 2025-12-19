@@ -57,12 +57,12 @@ const placementPartners = [
   },
   {
     name: "Emmay Logistics",
-    logo: "https://via.placeholder.com/200x100/4F46E5/FFFFFF?text=Emmay+Logistics",
+    logo: "/images/logos/placement_partners/emmay.svg",
     fallback: "Emmay",
   },
   {
     name: "The Road Tales",
-    logo: "https://via.placeholder.com/200x100/DC2626/FFFFFF?text=The+Road+Tales",
+    logo: "/images/logos/placement_partners/roadtales.png",
     fallback: "Road Tales",
   },
   {
@@ -72,12 +72,12 @@ const placementPartners = [
   },
   {
     name: "Bhadra",
-    logo: "https://via.placeholder.com/200x100/059669/FFFFFF?text=Bhadra",
+    logo: "/images/logos/placement_partners/bhadra.jpeg",
     fallback: "Bhadra",
   },
   {
     name: "Çelebi",
-    logo: "https://logos-world.net/wp-content/uploads/2021/08/Celebi-Logo.png",
+    logo: "/images/logos/placement_partners/celebi.png",
     fallback: "Çelebi",
   },
   {
@@ -97,12 +97,12 @@ const placementPartners = [
   },
   {
     name: "BWFS Bird Worldwide Flight Services",
-    logo: "https://via.placeholder.com/200x100/7C3AED/FFFFFF?text=BWFS",
+    logo: "/images/logos/placement_partners/bwfs.jpeg",
     fallback: "BWFS",
   },
   {
     name: "Valtrans",
-    logo: "https://via.placeholder.com/200x100/EA580C/FFFFFF?text=Valtrans",
+    logo: "/images/logos/placement_partners/valtrans.png",
     fallback: "Valtrans",
   },
   {
@@ -117,7 +117,7 @@ const placementPartners = [
   },
   {
     name: "Emirates",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Emirates-Logo.png",
+    logo: "/images/logos/placement_partners/emirates.png",
     fallback: "Emirates",
   },
   {
@@ -137,12 +137,12 @@ const placementPartners = [
   },
   {
     name: "DHL",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/DHL-Logo.png",
+    logo: "/images/logos/placement_partners/dhl.png",
     fallback: "DHL",
   },
   {
     name: "Aramex",
-    logo: "https://logos-world.net/wp-content/uploads/2020/06/Aramex-Logo.png",
+    logo: "/images/logos/placement_partners/aramex.png",
     fallback: "Aramex",
   },
 ];
@@ -199,7 +199,7 @@ export function PlacementPartners() {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-full max-h-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                   onError={(e) => {
                     // Fallback to text if image fails to load

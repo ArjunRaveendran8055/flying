@@ -236,7 +236,7 @@ export function ContactForm() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-white text-primary-600 hover:bg-white/90"
+                  className="w-full bg-white text-gray-900 hover:bg-white/90 hover:text-gray-900"
                 >
                   Submit
                   <Send className="ml-2 w-5 h-5" />

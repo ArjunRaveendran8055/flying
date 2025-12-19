@@ -8,7 +8,7 @@
     "build:cloudflare": "npx @opennextjs/cloudflare build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build:cloudflare && wrangler pages deploy .opennext"
+    "deploy": "npm run build:cloudflare && wrangler pages deploy .open-next"
   },
   "dependencies": {
     "gsap": "^3.12.5",
